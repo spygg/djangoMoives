@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>家庭影院</title>
+</head>
+<body>
+  <ol>
+    {% for movie in movies %}
+      <li> 
+        <a href="{% url 'movie' movie %}"> {{ movie }}</a>
+      </li>
+    {% endfor%}
+  </ol>
+</body>
+</html>
