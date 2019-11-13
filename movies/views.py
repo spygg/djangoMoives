@@ -42,9 +42,9 @@ class RangeFileWrapper(object):
 
 
 def stream_video(request, path):
+    
+    path = os.path.join(settings.MOVIE_PATH, path)
     print(path + "##########################")
-    path = settings.MOVIE_PATH + path
-
     range_header = request.META.get('HTTP_RANGE', '').strip()
     range_match = range_re.match(range_header)
     size = os.path.getsize(path)

@@ -119,5 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MOVIE_PATH = '/home/spygg/Downloads/'
+MOVIE_PATH = os.path.join(BASE_DIR, "media")
 
+print("###" + BASE_DIR)
